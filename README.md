@@ -7,6 +7,16 @@
 
 Um chatbot inteligente mergulha no universo dos cursos Alura! Com uma simulação de banco de dados em JSON, este projeto oferece uma experiência interativa e informativa, permitindo consultas sobre cursos com estilo e eficiência.
 
+## 💻 Projeto Web e Mobile (IOS e Android)
+
+<p align="center">
+   <img src="./assets/gif/gravacao-android.gif" width="200">
+</p>
+
+<p align="center">
+   <img src="./assets/gif/gravacao-web.gif" width="850">
+</p>
+
 ## 🛠 Tecnologias
 
 Tecnologias utilizadas para a criação da aplicação
