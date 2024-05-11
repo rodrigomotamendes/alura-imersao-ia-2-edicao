@@ -8,10 +8,10 @@ import UserMessage from './components/usermessage';
 export default function HomeScreen() {
 	const [isFocused, setIsFocused] = useState(false);
   const [inputText, setInputText] = useState("");
-	const [data, setData] = useState([]);
+	const [data, setData] = useState([] as string[]);
 
 	function handleInput() {
-		setData((prevList) => [...prevList, inputText] as any as []);
+		setData((prevList) => [...prevList, inputText] as string[]);
 		setInputText("");
 	}
 
@@ -45,16 +45,16 @@ export default function HomeScreen() {
 
 			<View style={isFocused ? styles.textInputTrue : styles.textInputFalse}>
 				<TextInput 
-          placeholder="Digite uma pergunta" 
+					placeholder="Digite uma pergunta" 
 					placeholderTextColor={'#9d9ea0'}
-          style={styles.inputText} 
-          value={inputText} 
-          onChangeText={(text) => setInputText(text)}
+					style={styles.inputText} 
+					value={inputText} 
+					onChangeText={(text) => setInputText(text)}
 					onBlur={() => setIsFocused(false)}
-      		onFocus={() => setIsFocused(true)}
+					onFocus={() => setIsFocused(true)}
 					onSubmitEditing={handleInput}/>
 
-				<TouchableOpacity onPress={handleInput} style={styles.button}>
+				<TouchableOpacity onPress={handleInput} style={styles.button} activeOpacity={0.6}>
 					<Image source={require("../assets/icons/paper-plane.png")} style={styles.imageButton} />
 				</TouchableOpacity>
 			</View>
