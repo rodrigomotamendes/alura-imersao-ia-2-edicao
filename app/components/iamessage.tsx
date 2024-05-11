@@ -6,6 +6,8 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 import { useDataChatHook } from "../hook/useDataChatHook";
 
+import { dataModel } from "../data/dataModel";
+
 export default function IAMessage(props: { prompt: string }) {
 	const [iaText, setIaText] = useState("");
 	const [isLoadingMessage, setIsLoadingMessage] = useState(true)
@@ -13,17 +15,21 @@ export default function IAMessage(props: { prompt: string }) {
 	const {chatData, storageData} = useDataChatHook();
 
 	const genai = new GoogleGenerativeAI(process.env.EXPO_PUBLIC_GEMINI_API_KEY as string);
+	const modelChat = 'gemini-1.5-pro-latest';
 
 	async function dataGenAI() {
 		try {
 			setIsLoadingMessage(true);
 
-			const model = genai.getGenerativeModel({ model: "gemini-pro" });
+			const model = genai.getGenerativeModel({ 
+				model: modelChat,
+				systemInstruction: JSON.stringify(dataModel),
+			});
 
 			const chat = model.startChat({
 				history: chatData,
 				generationConfig: {
-					maxOutputTokens: 100,
+					maxOutputTokens: 1000,
 				},
 			});
 
@@ -59,14 +65,19 @@ export default function IAMessage(props: { prompt: string }) {
 		<View style={styles.response}>
 
 			<View style={styles.header}>				
-				<Image source={require("../../assets/icons/google-gemini-icon.png")} style={styles.icon} />
-				<Text style={{ fontWeight: 600, paddingLeft: 8 }}>Gemini</Text>				
+				<Image 
+					resizeMode='contain'  
+					source={require("../../assets/icons/google-gemini-icon.png")} style={styles.logo}/>
+
+				<Image 
+					resizeMode='contain'  
+					source={require("../../assets/icons/gemini_wordmark.png")} style={styles.image} />		
 			</View>
 
 			{isLoadingMessage ? 
 				<View style={{width: 120}}>
 					<ActivityIndicator size={24} color={'#7D81D7'}/>
-				</View>	: <Markdown>{iaText}</Markdown>}
+				</View>	: <Markdown style={{body: {fontSize: 16}}}>{iaText}</Markdown>}
 		</View>
 	);
 }
@@ -85,8 +96,13 @@ const styles = StyleSheet.create({
 		alignItems: "center", 
 		justifyContent: "flex-start"
 	},
-	icon: {
+	logo: {
 		width: 28,
 		height: 28,
+	},
+	image: {
+		width: 50,
+		height: 28,
+		marginLeft: 8,
 	},
 });
