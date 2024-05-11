@@ -7,7 +7,7 @@
   "rewrites": [
     {
       "source": "/:path*",
-      "destination": "/app/_layout.tsx"
+      "destination": "/"
     }
   ]
 }
