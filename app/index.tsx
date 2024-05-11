@@ -11,6 +11,10 @@ export default function HomeScreen() {
 	const [data, setData] = useState([] as string[]);
 
 	function handleInput() {
+		if(inputText === '') {
+			return;
+		}
+		
 		setData((prevList) => [...prevList, inputText] as string[]);
 		setInputText("");
 	}
