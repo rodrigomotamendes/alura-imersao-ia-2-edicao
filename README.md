@@ -1,50 +1,79 @@
-# Welcome to your Expo app 👋
+<div align="center">
+  <img src="./assets/icons/logo-alura.png" width="200">
+  <h1>Imersão IA 2ª edição</h1>
+</div>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 🚀 Descrição
 
-## Get started
+Um chatbot inteligente mergulha no universo dos cursos Alura! Com uma simulação de banco de dados em JSON, este projeto oferece uma experiência interativa e informativa, permitindo consultas sobre cursos com estilo e eficiência.
 
-1. Install dependencies
+## 🛠 Tecnologias
 
-   ```bash
-   npm install
-   ```
+Tecnologias utilizadas para a criação da aplicação
 
-2. Start the app
+- Expo
+- React Native
+- TypeScript
+- React Native Markdown Display
+- Google Generative AI
 
-   ```bash
-    npx expo start
-   ```
+## 📋 Exemplo de dados inseridos no Modelo
 
-In the output, you'll find options to open the app in a
+Os dados de exemplo estão dentro de "app/data"
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```json
+...
+{
+   "id": 51,
+   "titulo": "imersão alura em inteligência arficial 2 edição",
+   "descricao": "aprenda os fundamentos da inteligência arficial nessa semana de conteúdos",
+   "categoria": "data science",
+   "quantidade_aulas": 5,
+   "carga_horaria": 10,
+   "tecnologia": "machine learning",
+   "instrutores": ["fabricio carraro", "paulo silveira", "ana raquel"],
+   "quantidade_alunos_inscritos": 1250,
+   "ano_lancamento_curso": 2024,
+   "dificuldade": "iniciante"
+}
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🔥 Para Clonar o repositório
 
-## Learn more
+No terminal execute o seguinte código:
 
-To learn more about developing your project with Expo, look at the following resources:
+```bash
+ git clone https://github.com/rodrigomotamendes/alura-imersao-ia-2-edicao
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🔥 Executando o projeto
 
-## Join the community
+Utilize o **yarn** ou o **npm install** para instalar as dependências do projeto. Em seguida, inicie o projeto.
 
-Join our community of developers creating universal apps.
+Comando para iniciar a aplicação. Depois só escolher em que dispositivo irá rodar o projeto.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npm run start
+```
+
+ou
+
+```bash
+npx expo start
+```
+
+Para iniciar a aplicação web pode usar o comando.
+
+```bash
+npm run web
+```
+
+Para iniciar a aplicação android pode usar o comando.
+
+```bash
+npm run android
+```
+
+## 💜 Autor
+
+Projeto criado por [rodrigomotamendes](https://www.linkedin.com/in/rodrigo-mota-mendes/)
