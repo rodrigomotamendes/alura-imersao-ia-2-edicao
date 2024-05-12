@@ -48,6 +48,16 @@ Os dados de exemplo estão dentro de "app/data"
 }
 ```
 
+## 🤖 Exemplo de Perguntas para o Chatbot
+
+Com os dados inseridos podemos fazer diversas perguntas, como por exemplo:
+
+- Qual o curso com maior número de alunos?
+- Quais os 10 cursos com mais aluno?
+- Quantidade de alunos somando todos os cursos?
+- Quais cursos de front-end existem?
+- Existe curso de machine learning na lista?
+
 ## 🔥 Para Clonar o repositório
 
 No terminal execute o seguinte código:

@@ -6,7 +6,7 @@
   "framework": null,
   "rewrites": [
     {
-      "source": "/app/_layout.tsx",
+      "source": "/:path*",
       "destination": "/"
     }
   ]
