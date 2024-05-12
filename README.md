@@ -5,7 +5,7 @@
 
 ## 🚀 Descrição
 
-Um chatbot inteligente mergulha no universo dos cursos Alura! Com uma simulação de banco de dados em JSON, este projeto oferece uma experiência interativa e informativa, permitindo consultas sobre cursos com estilo e eficiência.
+Desbrave o vasto catálogo de cursos Alura com nosso chatbot inteligente! Impulsionado pela inteligência artificial, ele oferece uma experiência envolvente e educativa, permitindo consultas detalhadas sobre os cursos disponíveis. Além disso, com a capacidade de manter o contexto da conversa, nossa interface proporciona interações fluidas e personalizadas. Disponível em iOS, Android e web, desfrute da conveniência de acessar conhecimento instantâneo em qualquer lugar, a qualquer momento. Explore, aprenda e evolua com facilidade, guiado pela nossa interface inteligente e intuitiva, apoiada por uma simulação de banco de dados em JSON.
 
 ## 💻 Projeto Web e Mobile (IOS e Android)
 
@@ -52,11 +52,11 @@ Os dados de exemplo estão dentro de "app/data"
 
 Com os dados inseridos podemos fazer diversas perguntas, como por exemplo:
 
-- Qual o curso com maior número de alunos?
-- Quais os 10 cursos com mais aluno?
-- Quantidade de alunos somando todos os cursos?
+- Qual o curso com o maior número de alunos?
 - Quais cursos de front-end existem?
+- Quantidade de alunos somando todos os cursos?
 - Existe curso de machine learning na lista?
+- Quais os 10 cursos com mais aluno?
 
 ## 🔥 Para Clonar o repositório
 
